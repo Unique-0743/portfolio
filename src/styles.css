@@ -241,4 +241,17 @@ body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
   }
+@media (max-width: 768px) {
+  body {
+    background-size: contain;
+    background-position: top;
+  }
+}
+
+@media (max-height: 500px) {
+  body {
+    background-size: contain;
+  }
+}
+
   

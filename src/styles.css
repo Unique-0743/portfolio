@@ -1,0 +1,244 @@
+body {
+    background: #0d0d0d;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .con{
+    color:rgb(204, 204, 51);
+  }
+  .section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    transition: all 0.5s ease;
+    scroll-margin-top: 60px;  /* Offset for fixed navbar */
+  }
+  .section.active-section {
+    box-shadow: 0 0 25px rgba(57, 255, 20, 0.7), 0 0 50px rgba(57, 255, 20, 0.5);
+    transform: scale(1.02);
+    border-radius: 15px;
+  }
+  
+  .section:not(:last-child) {
+    margin-bottom: 50px;  /* Gap between sections */
+  }
+  
+  .card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 255, 195, 0.5);
+    padding: 30px;
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .neon-text {
+    color: #00ffc3;
+    
+  }
+  
+  .neon-button {
+    background-color: #0073b1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .neon-button:hover {
+    background-color: #005582;
+  }
+  
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #00ffc3;
+    
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-pic:hover {
+    transform: scale(1.1);
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(21, 88, 140, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    padding: 10px 0;
+    border-bottom: 2px outset bisque;
+  }
+  
+  .navbar-list {
+    
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  .nav-link {
+    color: #00ffc3;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .nav-link:hover {
+    background: rgba(57, 255, 20, 0.2);
+    color:  rgb(255, 244, 35);
+  }
+  
+  .navbar-list .nav-link.active-link {
+    background: rgba(20, 234, 148, 0.7);  /* Neon Green Background */
+    color: #fff;
+  }
+  
+  .project-list {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .project-list li {
+    background: #262626;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 195, 0.3);
+  }
+  
+  .neon-link {
+    color: #00ffc3;
+    text-decoration: underline;
+  }
+  .project-item {
+    background: #262626;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 195, 0.3);
+    transition: background 0.3s ease;
+    position: relative;
+  }
+  
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .project-item h3 {
+    margin: 0;
+    color: #00ffc3;
+  }
+  
+  .view-info-btn {
+    background: #00ffc3;
+    color: #000;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+    margin-left: 20px;
+  }
+  
+  .view-info-btn:hover {
+    background: rgb(170, 163, 25);
+    color: #fff;
+  }
+  
+  .project-description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    color: #d3d3d3;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+  
+  .project-description.show {
+    max-height: 500px;
+    opacity: 1;
+  }
+  .button-group {
+    display: flex;
+    justify-content: center;  /* Center align the buttons */
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  /* LinkedIn Button - Blue */
+  .linkedin-button {
+    display: inline-block;
+    background-color: #0073b1;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .linkedin-button:hover {
+    background-color: #3783ac;
+    
+  }
+  
+  /* Resume Button - Red */
+  .resume-button {
+    display: inline-block;
+    background-color: #d35f12;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .resume-button:hover {
+    background-color: #dd8245;
+    
+  }
+  body {
+    background: url("D:\port\public\images\techy.webp") no-repeat center center fixed;
+    background-size: cover;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+  }
+  
